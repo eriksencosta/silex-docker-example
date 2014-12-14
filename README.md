@@ -1,5 +1,7 @@
 # Silex Docker Example
 
+[![Build Status](https://travis-ci.org/eriksencosta/silex-docker-example.svg?branch=master)](https://travis-ci.org/eriksencosta/silex-docker-example)
+
 This is an example application showing how to use the [eriksencosta/php-dev][#docker-image] Docker image.
 
 To get started, install [Docker][#docker-installation] on your machine. Then, run the following commands:
