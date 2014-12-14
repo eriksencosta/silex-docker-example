@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+$input = new Symfony\Component\Console\Input\ArgvInput();
+
+$environmentReady = true;
+
+try {
+    Dotenv::load(__DIR__.'/../');
+} catch (\InvalidArgumentException $e) {
+    $environmentReady = false;
+}
+
+require_once __DIR__.'/app.php';
+
+$app->register(new Knp\Provider\ConsoleServiceProvider(), array(
+    'console.name'              => 'Example',
+    'console.version'           => 'master',
+    'console.project_directory' => __DIR__.'/../src'
+));
+
+require_once __DIR__.'/commands.php';
+
+$app['console']->run($input);

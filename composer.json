@@ -1,0 +1,20 @@
+{
+    "autoload": {
+        "psr-0": {
+            "Example": "src/"
+        }
+    },
+    "require": {
+        "doctrine/dbal": "2.2.*",
+        "knplabs/console-service-provider": "dev-master",
+        "silex/silex": "~1.2",
+        "twig/twig": "~1.16",
+        "vlucas/phpdotenv": "~1.1"
+    },
+    "require-dev": {
+        "behat/behat": "~3.0",
+        "phpunit/phpunit": "~4.3",
+        "symfony/browser-kit": "~2.4",
+        "symfony/css-selector": "~2.4"
+    }
+}

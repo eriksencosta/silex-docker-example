@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <p>
+    {% if issues|length > 0 %}
+        There are {{ issues|length }} issues.
+    {% else %}
+        There are no issues available. Start looking for some trouble ;)
+    {% endif %}
+    </p>
+
+    {% if issues|length > 0 %}
+    <ul>
+        {% for issue in issues %}
+        <li>
+            <a href="{{ url.generate('issue', { id: issue.id }) }}">{{ issue.title }}</a>
+            (reported by {{ issue.author }})
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.twig" %}
+
+{% block page_title %}#{{ issue.id }}: {{ issue.title }}{% endblock %}
+{% block page_heading %}#{{ issue.id }}: {{ issue.title }}{% endblock %}
+
+{% block content %}
+    <p>Reported by: {{ issue.author }}</p>
+    <p>{{ issue.description }}</p>
+    <p><a href="{{ url.generate('home') }}">back to the issues list</a></p>
+{% endblock %}
