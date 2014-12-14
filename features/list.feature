@@ -6,7 +6,7 @@ Feature: List issues
     Scenario: There are multiple issues
         Given there are issues:
           | title                           | description                            | author  |
-          | Exploding ciclomatic complexity | The package foo have too complex code. | @foobar |
+          | Exploding cyclomatic complexity | The package foo have too complex code. | @foobar |
           | FooTest::testBar tests nothing  | PHPUnit reports it as a risky test.    | @foobar |
         When I go to "/"
         Then I should see 2 issues
@@ -14,7 +14,7 @@ Feature: List issues
     Scenario: There is one issue
         Given there are issues:
           | title                           | description                            | author  |
-          | Exploding ciclomatic complexity | The package foo have too complex code. | @foobar |
+          | Exploding cyclomatic complexity | The package foo have too complex code. | @foobar |
         When I go to "/"
         Then I should see 1 issue
 
