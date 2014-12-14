@@ -3,7 +3,6 @@
 require_once 'vendor/phpunit/phpunit/src/Framework/Assert/Functions.php';
 
 use Behat\Behat\Context\Context;
-use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\TableNode;
 use Symfony\Component\HttpKernel\Client;

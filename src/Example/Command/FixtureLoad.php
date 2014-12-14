@@ -2,7 +2,6 @@
 
 namespace Example\Command;
 
-use Doctrine\DBAL\DriverManager;
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
